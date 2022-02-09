@@ -1,0 +1,16 @@
+<div class="container-fluid  py-3 align-self-start ">   
+    <p>Caracteristicas Empleado<p>       
+    <form class="form-inline row pe-4 " >
+          <div class="form-group mb-2  col flex-direction-row">
+            <label for="caracteristica" class="sr-only">Caracteristica:</label>
+            <input type="text"  class="form-control" id="caracteristica" value="" #caracteristica> 
+          </div>          
+          <button  class="btn btn-primary mb-2 mt-1 col-2" (click)="agregaCaracteristica(caracteristica.value)">Agregar</button>
+        </form> 
+    <ul>
+        <li *ngFor="let carac of caracteristicas;let i = index">
+            {{i}}   {{carac}}
+        </li>
+    </ul>
+      
+</div>

@@ -1,0 +1,28 @@
+<div class="container-fluid border border-sucess border-2 rounded py-3 ">
+    <h2>Actualizacion empleado {{indice+1}}</h2>
+    <form class="form-inline row pe-4 " >
+      <div class="form-group mb-2   col">
+        <label for="nombre" >Nombre</label>
+        <input type="text" class="form-control" id="nombre" [value]="empleado.nombre" #nombre>
+      </div>
+      <div class="form-group  mb-2 col">
+        <label for="apellido">Apellido</label>
+        <input type="text" class="form-control" id="apellido" [value]="empleado.apellido" #apellido>
+      </div>
+      <div class="form-group  mb-2 col">
+        <label for="cargo" >Cargo</label>
+        <input type="text" class="form-control" id="cargo" [value]="empleado.cargo" #cargo>
+      </div>
+      <div class="form-group  mb-2 col">
+        <label for="sueldo" >Sueldo</label>
+        <input type="number" class="form-control" id="sueldo" [value]="empleado.sueldo" #sueldo>
+      </div>
+      <button  class="btn btn-primary mb-2 mt-1 col-2" (click)="actualizarEmp(nombre.value,apellido.value,cargo.value,sueldo.value)" *ngIf="accion===1">Actualizar</button>
+    </form>
+    <div class="row justify-content-center mt-3">
+      <button class="btn btn-danger btn-lg w-auto" (click)="borrarEmpleado()" *ngIf="accion===2">Borrar</button>
+    </div>
+  </div>
+ 
+
+  

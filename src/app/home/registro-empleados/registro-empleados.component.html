@@ -1,0 +1,23 @@
+<div class="container-fluid border border-sucess border-2 rounded py-3 ">
+  <h2>Registrar Empleado</h2>
+  <form class="form-inline row pe-4 " >
+    <div class="form-group mb-2   col">
+      <label for="nombre" class="sr-only">Nombre</label>
+      <input type="text"  class="form-control" id="nombre" value="" #nombre> 
+    </div>
+    <div class="form-group  mb-2 col">
+      <label for="apellido" class="sr-only">Apellido</label>
+      <input type="text" class="form-control" id="apellido" #apellido>
+    </div>
+    <div class="form-group  mb-2 col">
+      <label for="cargo" class="sr-only">Cargo</label>
+      <input type="text" class="form-control" id="cargo" #cargo>
+    </div>
+    <div class="form-group  mb-2 col">
+      <label for="sueldo" class="sr-only">Sueldo</label>
+      <input type="number" class="form-control" id="sueldo" #sueldo>
+    </div>
+    <button  class="btn btn-primary mb-2 mt-1 col-2" (click)="agregaEmpleado(nombre.value,apellido.value,cargo.value,sueldo.value)">Registrar</button>
+  </form>
+</div>
+

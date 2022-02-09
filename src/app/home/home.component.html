@@ -1,0 +1,22 @@
+<div class="w-75 mx-auto my-3">
+<h1>{{ title }}</h1>
+
+<app-registro-empleados></app-registro-empleados>
+
+<div >
+    <h2>Listado Empleados</h2>
+    <ul>
+        <li *ngFor="let empleado of empleados, let indice = index">
+            
+             {{indice+1}}   {{empleado.nombre}}  {{empleado.apellido}}  {{empleado.cargo}}  {{empleado.sueldo}}
+        <a [routerLink]="['/actualizacion',indice]" [queryParams]="{accion:'1'}">
+            Editar
+        </a>
+        <a [routerLink]="['/actualizacion',indice]" [queryParams]="{accion:'2'}" >
+            
+        </a>
+            <app-caracteristicas-empleado></app-caracteristicas-empleado>
+        </li>
+    </ul>
+</div>
+</div>
